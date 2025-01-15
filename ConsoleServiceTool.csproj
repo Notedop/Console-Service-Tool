@@ -33,15 +33,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.9.28" />
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2365.46" />
-    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
-    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.12.19" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2903.40" />
+    <PackageReference Include="System.IO.Ports" Version="9.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="9.0.0" />
     <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
-    <PackageReference Include="Vanara.PInvoke.CfgMgr32" Version="4.0.0-beta" />
-    <PackageReference Include="Vanara.PInvoke.SetupAPI" Version="4.0.0-beta" />
-    <PackageReference Include="Vanara.SystemServices" Version="3.4.17" />
-    <PackageReference Include="Velopack" Version="0.0.359" />
+    <PackageReference Include="Vanara.PInvoke.CfgMgr32" Version="4.0.4" />
+    <PackageReference Include="Vanara.PInvoke.SetupAPI" Version="4.0.4" />
+    <PackageReference Include="Vanara.SystemServices" Version="4.0.4" />
+    <PackageReference Include="Velopack" Version="0.0.1053" />
   </ItemGroup>
   
   <ItemGroup>
@@ -73,6 +76,11 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RepairHub\Repositories\" />
+    <Folder Include="RepairHub\Views\" />
   </ItemGroup>
 
 </Project>

@@ -91,7 +91,7 @@ namespace ConsoleServiceTool
 #endif
             var newVersion = await mgr.CheckForUpdatesAsync();
             if (newVersion == null)
-                return;            
+                return;
             await mgr.DownloadUpdatesAsync(newVersion);
             mgr.ApplyUpdatesAndRestart(newVersion);
         }
@@ -104,6 +104,11 @@ namespace ConsoleServiceTool
             if (assemblyLocation == default) return false;
             var updateDotExe = Path.Combine(assemblyLocation, "..", "Update.exe");
             return File.Exists(updateDotExe);
+        }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ShowControl<T>() where T : UserControl

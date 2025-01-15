@@ -35,72 +35,91 @@ namespace ConsoleServiceTool
             homeToolStripMenuItem = new ToolStripMenuItem();
             sonyToolStripMenuItem = new ToolStripMenuItem();
             playStation5ToolStripMenuItem = new ToolStripMenuItem();
+            stockToolStripMenuItem = new ToolStripMenuItem();
             MainPanel = new Panel();
             label1 = new Label();
+            workbenchToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, sonyToolStripMenuItem });
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, sonyToolStripMenuItem, stockToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1564, 24);
+            menuStrip1.Padding = new Padding(9, 3, 0, 3);
+            menuStrip1.Size = new Size(2234, 35);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            homeToolStripMenuItem.Size = new Size(52, 20);
+            homeToolStripMenuItem.Size = new Size(77, 29);
             homeToolStripMenuItem.Text = "Home";
             // 
             // sonyToolStripMenuItem
             // 
             sonyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { playStation5ToolStripMenuItem });
             sonyToolStripMenuItem.Name = "sonyToolStripMenuItem";
-            sonyToolStripMenuItem.Size = new Size(45, 20);
+            sonyToolStripMenuItem.Size = new Size(68, 29);
             sonyToolStripMenuItem.Text = "Sony";
             // 
             // playStation5ToolStripMenuItem
             // 
             playStation5ToolStripMenuItem.Name = "playStation5ToolStripMenuItem";
-            playStation5ToolStripMenuItem.Size = new Size(142, 22);
+            playStation5ToolStripMenuItem.Size = new Size(216, 34);
             playStation5ToolStripMenuItem.Text = "PlayStation 5";
+            // 
+            // stockToolStripMenuItem
+            // 
+            stockToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { workbenchToolStripMenuItem });
+            stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            stockToolStripMenuItem.Size = new Size(116, 29);
+            stockToolStripMenuItem.Text = "Repair Hub";
+            stockToolStripMenuItem.Click += stockToolStripMenuItem_Click;
             // 
             // MainPanel
             // 
             MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(0, 75);
+            MainPanel.Location = new Point(0, 120);
+            MainPanel.Margin = new Padding(4, 5, 4, 5);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1564, 916);
+            MainPanel.Size = new Size(2234, 1532);
             MainPanel.TabIndex = 2;
             // 
             // label1
             // 
             label1.BackColor = SystemColors.ControlLight;
             label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Open Sans", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 24);
-            label1.Margin = new Padding(15);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 35);
+            label1.Margin = new Padding(21, 25, 21, 25);
             label1.Name = "label1";
-            label1.Padding = new Padding(20, 0, 0, 0);
-            label1.Size = new Size(1564, 51);
+            label1.Padding = new Padding(29, 0, 0, 0);
+            label1.Size = new Size(2234, 85);
             label1.TabIndex = 3;
             label1.Text = "Home";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // workbenchToolStripMenuItem
+            // 
+            workbenchToolStripMenuItem.Name = "workbenchToolStripMenuItem";
+            workbenchToolStripMenuItem.Size = new Size(270, 34);
+            workbenchToolStripMenuItem.Text = "Workbench";
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1564, 991);
+            ClientSize = new Size(2234, 1652);
             Controls.Add(MainPanel);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Console Service Tool (C.S.T)";
@@ -118,5 +137,7 @@ namespace ConsoleServiceTool
         private ToolStripMenuItem homeToolStripMenuItem;
         private Panel MainPanel;
         private Label label1;
+        private ToolStripMenuItem stockToolStripMenuItem;
+        private ToolStripMenuItem workbenchToolStripMenuItem;
     }
 }
