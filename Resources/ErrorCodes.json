@@ -1,6 +1,6 @@
 {
-  "Revision": "1.0.1.9",
-  "Description": "Updated Codes, 80910002, 80C00136, C0020303",
+  "Revision": "1.0.2.0",
+  "Description": "Updated Codes, 80050000, 80871061, 80871062, C0810301",
   "PlayStation5": {
     "ErrorCodes": [
       {
@@ -48,6 +48,12 @@
       {
         "ID": "80050000",
         "Message": "Main SoC CPU Power Fail - SoC VRM Power Fail (CPU) (2 Phases)- VRM Power Fail (CPU): Couldn't get the error factor. APU VRM (2 Phases) Power Fail, Check Infineon XDPE14286A 16 Phase PWM Controller, Check mosfets APU side for short (Caps Usually Short) - Single Beep, 1 Second Blue Light, 8.6mA draw power on.",
+        "Status": 3,
+        "Priority": 3
+      },
+      {
+        "ID": "80050000",
+        "Message": "EDM-033 - Check F7502 fuse, On mosfet during boot; check pin 29 (PVCC)- 3(VCC) for 5V, if missing then 5V line issue, Check pin 31(DISB#) of VRMs, should be high (3.3v);  check around F7501/F7502. ",
         "Status": 3,
         "Priority": 3
       },
@@ -1858,10 +1864,16 @@
         "Priority": 0
       },
       {
+        "ID": "80871061",
+        "Message": "SSD Controller \u003C-\u003E APU Data Line Error, check for shorts on SSD data lines",
+        "Status": 3,
+        "Priority": 3
+      },
+      {
         "ID": "80871062",
-        "Message": "SSD Controller \u003C-\u003E Syscon (Bridge) Data Line Error",
-        "Status": 0,
-        "Priority": 0
+        "Message": "SSD Controller \u003C-\u003E Syscon (Bridge) Data Line Error, check for shorts on SSD data lines",
+        "Status": 3,
+        "Priority": 3
       },
       {
         "ID": "808710FF",
@@ -2190,6 +2202,12 @@
       {
         "ID": "C0810002",
         "Message": "HDMI IC Problem or Power Failure",
+        "Status": 0,
+        "Priority": 0
+      },
+      {
+        "ID": "C0810301",
+        "Message": "HDMI IC Problem or Data Line Short or Power Failure - Try reflow/reball/replace SouthBridge ",
         "Status": 0,
         "Priority": 0
       },
@@ -2801,7 +2819,7 @@
       },
       {
         "ID": "^C081[A-Za-z0-9]{4}$",
-        "Message": "Hardware Access - HDMI Tx Access Error - No memo",
+        "Message": "Hardware Access - HDMI Tx Access Error - Potential SB (reflow/reball/replace) or HDMI retimer",
         "Status": 0,
         "Priority": 0
       },
