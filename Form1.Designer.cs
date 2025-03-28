@@ -135,9 +135,10 @@ namespace ConsoleServiceTool
         private ToolStripMenuItem sonyToolStripMenuItem;
         private ToolStripMenuItem playStation5ToolStripMenuItem;
         private ToolStripMenuItem homeToolStripMenuItem;
-        private Panel MainPanel;
-        private Label label1;
         private ToolStripMenuItem stockToolStripMenuItem;
         private ToolStripMenuItem workbenchToolStripMenuItem;
+        private Panel MainPanel;
+        private Label label1;
+
     }
 }

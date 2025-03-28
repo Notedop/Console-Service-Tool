@@ -78,9 +78,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="RepairHub\Repositories\" />
-    <Folder Include="RepairHub\Views\" />
-  </ItemGroup>
-
 </Project>

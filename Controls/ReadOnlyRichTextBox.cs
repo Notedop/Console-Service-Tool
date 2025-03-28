@@ -1,11 +1,8 @@
-﻿using ConsoleServiceTool.Console.Sony.PlayStation5.Views;
-using ConsoleServiceTool.Console.Sony.Shared.Models;
+﻿using ConsoleServiceTool.Console.Sony.Shared.Models;
 using ConsoleServiceTool.Models;
 using ConsoleServiceTool.Utils;
-using ConsoleServiceTool.Views;
 using System.Runtime.InteropServices;
 using System.Text;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleServiceTool.Controls
 {

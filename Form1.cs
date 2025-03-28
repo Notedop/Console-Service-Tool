@@ -3,6 +3,7 @@ using ConsoleServiceTool.Utils;
 using ConsoleServiceTool.Views;
 using System.Diagnostics;
 using System.Reflection;
+using ConsoleServiceTool.RepairHub.Views;
 using Velopack;
 #if RELEASE
 using Velopack.Sources;
@@ -29,12 +30,14 @@ namespace ConsoleServiceTool
             controlFactory.Register<PlayStation5MainView>();
             controlFactory.Register<PS5NorView>();
             controlFactory.Register<PS5UartView>();
+            controlFactory.Register<PartsView>();
         }
 
         private void InitializeMenuItems()
         {
             homeToolStripMenuItem.Click += MenuItem_Click<HomeView>;
             playStation5ToolStripMenuItem.Click += MenuItem_Click<PlayStation5MainView>;
+            workbenchToolStripMenuItem.Click += MenuItem_Click<PartsView>;
         }
 
         internal static List<int> DecodeErrorToBanks(string id)

@@ -1,4 +1,4 @@
-﻿namespace ConsoleServiceTool.RepairHub.Models.Addresses;
+﻿namespace ConsoleServiceTool.RepairHub.Persistence.Entities.Addresses;
 
 public abstract class AddressBase
 {
@@ -14,5 +14,35 @@ public abstract class AddressBase
     public required string Country { get; set; }
     public required string PhoneNumber { get; set; }
     public required string EmailAddress { get; set; }
-    
+
+}
+public enum AddressType
+{
+    Billing,
+    Shipping,
+    Home,
+    Owner
+}
+
+public class HomeAddress : AddressBase
+{
+    public HomeAddress()
+    {
+        AddressType = AddressType.Home;
+    }
+}
+
+public class ShippingAddress : AddressBase
+{
+    private ShippingAddress()
+    {
+        AddressType = AddressType.Shipping;
+    }
+}
+public class BillingAddress : AddressBase
+{
+    private BillingAddress()
+    {
+        AddressType = AddressType.Billing;
+    }
 }

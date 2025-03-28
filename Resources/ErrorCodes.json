@@ -35,9 +35,9 @@
       },
       {
         "ID": "80000009",
-        "Message": "Hardware - AC In Detect - Unexpected Power Loss or Shutdown Failure",
-        "Status": 0,
-        "Priority": 0
+        "Message": "Hardware - AC In Detect - Unexpected Power Loss or Shutdown Failure - check for shorts on 1.95V line - 1.15V line - 0.75V line into APU",
+        "Status": 3,
+        "Priority": 3
       },
       {
         "ID": "8000000C",
@@ -1788,6 +1788,12 @@
       {
         "ID": "80810001",
         "Message": "PowerSequence - Power Sequence Error - General Power Failure (Peripheral, GDDR6, APU, Data Line Short)",
+        "Status": 3,
+        "Priority": 3
+      },
+      {
+        "ID": "80810001",
+        "Message": "EDM-010: check power on voltages on SoC, vRam - > 5V_ACPI_SOC - 1.0V_SOC_VSOC ",
         "Status": 3,
         "Priority": 3
       },
