@@ -87,7 +87,7 @@ namespace ConsoleServiceTool
 #if DEBUG
             var mgr = new UpdateManager(@"bin\Releases");
 #else
-            var source = new GithubSource(@"https://github.com/amoamare/Console-Service-Tool", accessToken: default, prerelease: false);
+            var source = new GithubSource(@"https://github.com/Notedop/Console-Service-Tool", accessToken: default, prerelease: false);
             var mgr = new UpdateManager(source);
 #endif
             var newVersion = await mgr.CheckForUpdatesAsync();
