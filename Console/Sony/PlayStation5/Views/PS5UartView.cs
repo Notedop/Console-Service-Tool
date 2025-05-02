@@ -181,9 +181,8 @@ namespace ConsoleServiceTool.Console.Sony.PlayStation5.Views
         {
             using var client = new HttpClient();
             client.BaseAddress = new Uri("https://raw.githubusercontent.com/");
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (compatible; PS5CodeReader/2.1; +https://github.com/amoamare)");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = await client.GetAsync("amoamare/ConsoleServiceTool/master/Resources/ErrorCodes.json");
+            var response = await client.GetAsync("Notedop/Console-Service-Tool/refs/heads/master/Resources/ErrorCodes.json");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadFromJsonAsync<PS5ErrorCodeList>();
         }
